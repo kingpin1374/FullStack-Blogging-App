@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bloggingapp-deployment
+  # FIXED: Matches the 'blogging-app-deployment' name in your Jenkinsfile
+  name: blogging-app-deployment
 spec:
   selector:
     matchLabels:
@@ -14,12 +15,14 @@ spec:
     spec:
       containers:
         - name: bloggingapp
-          image: adijaiswal/bloggingapp:latest # Updated image to private DockerHub image
+          # FIXED: Matches the DOCKER_IMAGE variable in your pipeline
+          image: amandevops001/blogging-app:latest 
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
+      # FIXED: Indentation (imagePullSecrets must be at the same level as containers)
       imagePullSecrets:
-        - name: regcred # Reference to the Docker registry secret
+        - name: regcred 
 ---
 apiVersion: v1
 kind: Service
