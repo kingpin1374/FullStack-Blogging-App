@@ -100,11 +100,10 @@
 	</build>
 	
 	<distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://13.235.245.200:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
+    <repository>
+        <id>maven-releases</id> <url>http://13.235.245.200:8081/repository/maven-releases/</url>
+    </repository>
+</distributionManagement>
             <id>maven-snapshots</id>
             <url>http://13.235.245.200:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
