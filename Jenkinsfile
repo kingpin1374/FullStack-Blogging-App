@@ -9,7 +9,6 @@ pipeline {
     environment {
         SCANNER_HOME = tool 'sonar-scanner'
         MAVEN_OPTS = "-Xmx512m"
-        // Replace with your Docker Hub/ECR repository
         DOCKER_IMAGE = "kingpin1374/blogging-app:${BUILD_NUMBER}"
         EKS_CLUSTER_URL = "https://EC2E9A88ED3A2DBAABFB58DC00D0F6E9.gr7.ap-south-1.eks.amazonaws.com"
     }
